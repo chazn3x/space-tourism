@@ -14,13 +14,18 @@ body {
   font-size: 18px;
   width: 100%;
   min-height: 100vh;
+  color: $white;
 }
 // typography
-h1, h2, h3, h4, .sub-heading {
+h1, h2, h3, h4, .sub-heading, .button {
   font-family: 'Bellefair', serif;
+  font-weight: normal;
 }
 h1 {
-  font-size: 150px;
+  font-size: 80px;
+  @media screen and (min-width: $tablet) {
+    font-size: 150px;
+  }
 }
 h2 {
   font-size: 100px;
@@ -33,15 +38,24 @@ h4 {
 }
 h5, .sub-heading-2, nav {
   font-family: 'Barlow Condensed', sans-serif;
+  font-weight: normal;
 }
 h5 {
-  font-size: 28px;
-  letter-spacing: 4.75;
+  font-size: 16px;
+  letter-spacing: 2.7px;
   color: $blue;
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+    letter-spacing: 3.4px;
+  }
+  @media screen and (min-width: $desktop) {
+    letter-spacing: 4.75px;
+    font-size: 28px;
+  }
 }
 .sub-heading-2 {
   font-size: 14px;
-  letter-spacing: 2.35;
+  letter-spacing: 2.35px;
 }
 nav {
   font-size: 16px;
@@ -49,11 +63,23 @@ nav {
 }
 // commons
 .background {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.button {
+  background-color: $white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
 }

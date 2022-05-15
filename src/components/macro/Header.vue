@@ -81,14 +81,14 @@ export default {
   align-items: center;
   width: 100%;
   padding: 1rem;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     padding: 0;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $desktop) {
     padding: 2rem 0;
   }
   .logo {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin: 0 3rem;
     }
   }
@@ -104,11 +104,11 @@ export default {
     right: 0;
     z-index: -1;
     background-color: #c8c8c81a;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
     padding-top: 5rem;
     width: 70vw;
     height: 100vh;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       min-width: max-content;
       max-width: max-content;
       height: auto;
@@ -116,7 +116,7 @@ export default {
       padding: 0 1rem;
       position: unset;
     }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: $desktop) {
       padding: 0 5rem;
     }
     &-button {
@@ -128,7 +128,7 @@ export default {
     &-links {
       display: flex;
       flex-direction: column;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tablet) {
         flex-direction: row;
       }
     }
@@ -138,23 +138,24 @@ export default {
       padding: .5rem 3rem;
       text-decoration: none;
       transition: border-bottom .2s;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tablet) {
         padding: 2rem 0;
         margin: 0 2rem;
+        border-bottom: 0 solid rgba(255,255,255,.5);
       }
       .bold {
         font-weight: 700;
       }
       &.router-link-exact-active {
         border-right: 3px solid $white;
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tablet) {
           border-right: none;
           border-bottom: 3px solid $white;
         }
       }
       &:not(.router-link-exact-active):hover {
-        @media screen and (min-width: 768px) {
-          border-bottom: 3px solid rgba(255,255,255,.5);
+        @media screen and (min-width: $tablet) {
+          border-bottom-width: 3px;
         }
       }
     }
