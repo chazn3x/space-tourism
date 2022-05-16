@@ -28,7 +28,10 @@ h1 {
   }
 }
 h2 {
-  font-size: 100px;
+  font-size: 56px;
+  @media screen and (min-width: $tablet) {
+    font-size: 100px;
+  }
 }
 h3 {
   font-size: 56px;
@@ -43,7 +46,6 @@ h5, .sub-heading-2, nav {
 h5 {
   font-size: 16px;
   letter-spacing: 2.7px;
-  color: $blue;
   @media screen and (min-width: $tablet) {
     font-size: 20px;
     letter-spacing: 3.4px;
@@ -52,6 +54,27 @@ h5 {
     letter-spacing: 4.75px;
     font-size: 28px;
   }
+  .number {
+    color: rgba(200,200,200,.3);
+    margin-right: 1rem;
+  }
+}
+p {
+  color: $blue;
+  font-size: 15px;
+  line-height: 25px;
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+.sub-heading {
+  font-size: 28px;
+  color: $white;
 }
 .sub-heading-2 {
   font-size: 14px;

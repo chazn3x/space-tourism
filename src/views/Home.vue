@@ -2,7 +2,7 @@
   <div class="background"></div>
   <div class="content">
     <div class="text">
-      <h5>SO, YOU WANT TO TRAVEL TO</h5>
+      <h5 class="sub-title">SO, YOU WANT TO TRAVEL TO</h5>
       <h1 class="title">SPACE</h1>
       <p class="paragraph">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
     </div>
@@ -46,23 +46,17 @@ export default {
     text-align: left;
     flex-direction: row;
   }
+  .sub-title {
+    color: $blue;
+  }
   .title {
     margin: 2rem 0;
   }
   .paragraph {
-    color: $blue;
-    font-size: 15px;
-    line-height: 25px;
     max-width: 415px;
     margin: 0 auto;
-    @media screen and (min-width: $tablet) {
-      font-size: 16px;
-      line-height: 28px;
-    }
     @media screen and (min-width: $desktop) {
       margin: 0;
-      font-size: 18px;
-      line-height: 32px;
       max-width: 445px;
     }
   }

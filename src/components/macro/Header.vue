@@ -85,7 +85,7 @@ export default {
     padding: 0;
   }
   @media screen and (min-width: $desktop) {
-    padding: 2rem 0;
+    padding-top: 2rem;
   }
   .logo {
     @media screen and (min-width: $tablet) {
@@ -141,7 +141,6 @@ export default {
       @media screen and (min-width: $tablet) {
         padding: 2rem 0;
         margin: 0 2rem;
-        border-bottom: 0 solid rgba(255,255,255,.5);
       }
       .bold {
         font-weight: 700;
@@ -153,8 +152,9 @@ export default {
           border-bottom: 3px solid $white;
         }
       }
-      &:not(.router-link-exact-active):hover {
-        @media screen and (min-width: $tablet) {
+      @media screen and (min-width: $desktop) {
+        border-bottom: 0 solid rgba(255,255,255,.5);
+        &:not(.router-link-exact-active):hover {
           border-bottom-width: 3px;
         }
       }
