@@ -75,7 +75,9 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

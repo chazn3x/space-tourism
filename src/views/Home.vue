@@ -34,15 +34,15 @@ export default {
   max-width: 1400px;
   height: 100%;
   margin: 0 auto;
-  padding: 120px 2rem 2rem;
+  padding: 3rem 2rem 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   @media screen and (min-width: $tablet) {
-    padding-top: 200px;
+    padding: 6rem 2rem 0;
   }
   @media screen and (min-width: $desktop) {
-    padding: 280px 150px 2rem;
+    padding: 200px 150px 2rem;
     text-align: left;
     flex-direction: row;
   }

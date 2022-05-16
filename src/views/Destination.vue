@@ -6,7 +6,7 @@
       <img class="destination-image" :src="require(`../assets/destination/${data.destinations[index].images.png}`)" :alt="data.destinations[index].name + ' image'">
       <div class="text">
         <nav class="section-links">
-          <a class="link" v-for="(link, i) in links" :key="i" @click="index = i" :class="{'active' : index == i}">{{link}}</a>
+          <a class="link" v-for="(link, i) in data.destinations" :key="i" @click="index = i" :class="{'active' : index == i}">{{link.name.toUpperCase()}}</a>
         </nav>
         <h2 class="title">{{data.destinations[index].name.toUpperCase()}}</h2>
         <p class="paragraph">{{data.destinations[index].description}}</p>
@@ -32,8 +32,7 @@ export default {
   data() {
     return {
       data,
-      index: 0,
-      links: ['MOON', 'MARS', 'EUROPA', 'TITAN']
+      index: 0
     }
   },
   methods: {
@@ -58,16 +57,16 @@ export default {
   max-width: 1400px;
   height: 100%;
   margin: 0 auto;
-  padding: 90px 1rem 2rem;
+  padding: 0 1rem 2rem;
   text-align: center;
   @media screen and (min-width: $tablet) {
-    padding: 120px 3rem 2rem;
+    padding: 3rem 3rem 2rem;
     h5 {
       text-align: left;
     }
   }
   @media screen and (min-width: $desktop) {
-    padding: 200px 8rem 2rem;
+    padding: 4rem 8rem 2rem;
     text-align: left;
   }
   .content {
