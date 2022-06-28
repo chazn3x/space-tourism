@@ -1,6 +1,7 @@
 {
   "name": "space-tourism",
   "version": "0.1.0",
+  "homepage": "space.chaznex.com",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
